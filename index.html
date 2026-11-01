@@ -1252,6 +1252,16 @@
       new Date().getFullYear();
 
   </script>
+  <script>
+  // Aggressive Netlify badge removal
+  setInterval(function() {
+    const badge = document.querySelector('div[data-netlify-badge="true"]') || document.getElementById('netlify-badge');
+    if (badge) {
+      badge.style.display = 'none';
+      badge.remove();
+    }
+  }, 500);
+  </script>
 
 </body>
 </html>
